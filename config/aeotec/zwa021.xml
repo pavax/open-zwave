@@ -3,7 +3,7 @@
 Aeotec Radiator Thermostat
 Product website: https://aeotec.com/z-wave-home-automation/thermostat-radiator-valve-trv/
 -->
-<Product xmlns="https://github.com/OpenZWave/open-zwave">
+<Product xmlns='https://github.com/OpenZWave/open-zwave'>
     <!-- Multilevel switch for setting valve opening -->
     <CommandClass id="38">
         <Value type="byte" genre="user" index="0" label="Valve Opening" units="%" min="0" max="100" value="0" />
@@ -16,7 +16,7 @@ Product website: https://aeotec.com/z-wave-home-automation/thermostat-radiator-v
                 Off: No heating, only frost protection.
                 Heat: Room temperature will be kept at the configured setpoint.
                 Heat Eco: Energy save heating mode. Room temperature will be lowered to the configured eco setpoint in order to save energy.
-                Full Power: Full power heating. This mode is left automatically after 5 minutes.
+                Boost: Full power heating. This mode is left automatically after 5 minutes.
                 Manufacturer Specific: Direct valve control mode. The valve opening percentage can be controlled using the switch multilevel command class.
             </Help>
             <Item label="Off" value="0"/>
@@ -38,10 +38,6 @@ Product website: https://aeotec.com/z-wave-home-automation/thermostat-radiator-v
         <Instance index="1"/>
         <Value genre="user" index="1" instance="1" label="Heat" max="28" min="8" read_only="false" type="decimal" units="°C" value="20" write_only="false"/>
         <Value genre="user" index="11" instance="1" label="Heat Eco" max="28" min="8" read_only="false" type="decimal" units="°C" value="16" write_only="false"/>
-        <Compatibility>
-            <Base>0</Base>
-            <AltTypeInterpretation>false</AltTypeInterpretation>
-        </Compatibility>
     </CommandClass>
     <!-- Configuration Parameters -->
     <CommandClass id="112">
